@@ -102,6 +102,8 @@ jobs:
           export CORRELATION_POLICY=$(yq eval '.corelation.correlationpolicy' generate.yaml)
           export JWT_POLICY=$(yq -r '.validateJWT.jwtpolicy' generate.yaml)
 
+          export TYPE=$(yq -r '.type' generate.yaml)
+
           
           #az login --service-principal --username ${{ secrets.AZURE_USERNAME }} --password ${{ secrets.AZURE_PASSWORD }} --tenant ${{ secrets.AZURE_TENANT_ID }}
           echo ${{ env.ENV_SPEC }}
