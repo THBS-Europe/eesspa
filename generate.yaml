@@ -89,14 +89,29 @@ openApiSpec: eesspa.yaml
 environmentSpec: QA
 authMethod: none
 filterIp:
-  allowip: 136.226.250.85
+  allowip: 49.37.251.122
 azureRateLimit:
   noOfCalls: 3
   renewalPeriod: 15
   counter: ip-address
 responseCache:
   timeDuration: 2
+validateJWT:
+  headerName: Authorization
+  failedStatusCode: 401
+  failedStatusMessage: Authorization failure
+  openIdURL: https://sit.identity.idmodule.eu/.well-known/openid-configuration
+  requiredClaims:
+    name: ""
+    match: ""
 corelation:
   correlationId: "true"
+allowedOrigins:
+  origins: http://localhost/
+  creds: "false"
+  methods: "get,post"
+  allowHeaders: origin
+  exposeHeaders: Expires
+  maxSeconds: 120
 schemes: []
 routes: []
