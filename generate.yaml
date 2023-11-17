@@ -86,10 +86,10 @@ description: "# OverviewEcoStruxure? Energy and Sustainability Scoring Partner A
   \ help from the community [here](https://community.se.com/t5/Green-Building-Scoring-and/bd-p/green-building-certification).---"
 basePath: '/ecostruxure? energy '
 openApiSpec: eesspa.yaml
-environmentSpec: Dev
+environmentSpec: QA
 authMethod: none
 filterIp:
-  allowip: 27.4.198.66
+  allowip: 136.226.250.85
 azureRateLimit:
   noOfCalls: 3
   renewalPeriod: 15
@@ -98,6 +98,5 @@ responseCache:
   timeDuration: 2
 corelation:
   correlationId: "true"
-  trace: "true"
 schemes: []
 routes: []
