@@ -2,13 +2,30 @@
 environmentSpec: Dev
 type: Product
 authMethod: none
+filterIp:
+  allowip: 203.192.253.87
+  filterpolicy: api
 azureRateLimit:
-  noOfCalls: 9
+  noOfCalls: 2
   renewalPeriod: 60
   ratepolicy: api
   counter: ip-address
+responseCache:
+  timeDuration: 30
+  cachepolicy: product
 product:
   productName: TektonKT
   apiList: "clouddictionariesapi,EA"
+validateJWT:
+  headerName: Authorization
+  failedStatusCode: 401
+  failedStatusMessage: Authorization failure
+  openIdURL: https://sit.identity.idmodule.eu/.well-known/openid-configuration
+  requiredClaims:
+    name: ""
+    match: ""
+  jwtpolicy: api
+corelation:
+  correlationpolicy: api
 schemes: []
 routes: []
