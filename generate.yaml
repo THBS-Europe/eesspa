@@ -4,15 +4,10 @@ type: Product
 authMethod: none
 filterIp:
   allowip: 203.192.253.87
-  filterpolicy: api
-azureRateLimit:
-  noOfCalls: 2
-  renewalPeriod: 60
-  ratepolicy: api
-  counter: ip-address
+  filterpolicy: product
 responseCache:
   timeDuration: 30
-  cachepolicy: product
+  cachepolicy: api
 product:
   productName: TektonKT
   apiList: "clouddictionariesapi,EA"
@@ -26,6 +21,8 @@ validateJWT:
     match: ""
   jwtpolicy: api
 corelation:
+  correlationId: "true"
+  trace: "true"
   correlationpolicy: api
 schemes: []
 routes: []
