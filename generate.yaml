@@ -5,12 +5,17 @@ authMethod: none
 filterIp:
   allowip: 203.192.253.87
   filterpolicy: product
+azureRateLimit:
+  noOfCalls: 2
+  renewalPeriod: 60
+  ratepolicy: api
+  counter: ip-address
 responseCache:
   timeDuration: 30
   cachepolicy: api
 product:
   productName: TektonKT
-  apiList: "clouddictionariesapi,EA"
+  apiList: "clouddictionariesapi,EA,echo-api,eesspa"
 validateJWT:
   headerName: Authorization
   failedStatusCode: 401
@@ -21,8 +26,6 @@ validateJWT:
     match: ""
   jwtpolicy: api
 corelation:
-  correlationId: "true"
-  trace: "true"
   correlationpolicy: api
 schemes: []
 routes: []
