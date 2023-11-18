@@ -15,7 +15,7 @@ responseCache:
   cachepolicy: api
 product:
   productName: TektonKT
-  apiList: "clouddictionariesapi,EA,echo-api,eesspa"
+  apiList: "cc-transformer-api,data-api-s,EA,echo-api"
 validateJWT:
   headerName: Authorization
   failedStatusCode: 401
@@ -24,9 +24,8 @@ validateJWT:
   requiredClaims:
     name: ""
     match: ""
-  jwtpolicy: api
+  jwtpolicy: product
 corelation:
-  correlationId: "true"
   correlationpolicy: api
 schemes: []
 routes: []
